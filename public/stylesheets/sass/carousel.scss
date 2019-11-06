@@ -1,0 +1,326 @@
+body {
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #002F36;
+    border-bottom: 0.2rem solid skyblue;
+  }
+  
+nav li {
+    float: left;
+}
+  
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+nav li a:hover {
+    background-color: #111;
+}
+
+.main_article{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 70%;
+    min-width: 85rem;
+}
+
+.banner {
+    width: 100%;
+    height:30rem;
+    background-color: #489AD8;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding-top: 2rem;
+    h1{
+        font-size : 30px;
+        margin: 0;
+    }
+    h5{
+        margin:0;
+    }
+}
+
+.banner input{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: 20rem;
+    height: 3rem;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #002F36;
+    &:hover{
+        background-color: #FFC400;
+    }
+}
+
+.top_carousel_section {
+    width: 49rem;
+    margin: 0 auto;
+    background-color: green;
+    display: flex;
+    position: relative;
+    margin-top: -5rem;
+    padding: 0;
+}
+
+.card {
+    flex: none;
+    width : 9rem;
+    height: 13rem;
+    background-size: 75rem 45rem;
+    color : white;
+    margin: 0.3rem;
+    position: absolute;
+    &:hover {
+        cursor: pointer;
+    }
+    p{
+        position: relative;
+        top: 9rem;
+        text-align : center;
+    }
+
+    div{
+        text-align: center;
+        position: relative;
+        top: 70%;
+        width: 100%;
+
+        input {
+            height: 0.7rem;
+            width: 0.7rem;
+            background-color: white;
+            border: 0;
+            outline: 0;
+            margin: 0.3rem;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+}
+
+$ship-color : #00A8E1;
+$stream-color : #FF6138;
+$shop-color : #E31F64;
+$read-color : #36C2B4;
+$more-color : #FFC400;
+
+.ship-card{
+    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/marketing/prime/detail_page/InteractivePlane_TILES_SpriteSheet_A._CB513333159_.png),
+    linear-gradient(30deg, #2C88AE 40%, $ship-color 90%, #00A8E1 48px);
+
+}
+.stream-card {
+    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/marketing/prime/detail_page/InteractivePlane_TILES_SpriteSheet_B._CB513285352_.png),
+    linear-gradient(30deg, #CC0C39 40%, $stream-color 90%, #FF6138 48px);
+}
+
+.shop-card {
+    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/marketing/prime/detail_page/InteractivePlane_TILES_SpriteSheet_C._CB513285352_.png),
+    linear-gradient(30deg, #A90067 40%, $shop-color 90%, #E31F64 48px);
+}
+
+.read-card {
+    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/marketing/prime/detail_page/InteractivePlane_TILES_SpriteSheet_D._CB513285353_.png),
+    linear-gradient(30deg, #008577 40%, $read-color 90%, #36C2B4 48px);
+}
+
+.more-card {
+    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/marketing/prime/detail_page/InteractivePlane_TILES_SpriteSheet_E._CB513285352_.png),
+    linear-gradient(30deg, #FF6138 40%, $more-color 90%, #FFC400 48px);
+}
+
+.bottom_carousel_section{
+    margin-top: 10rem;
+}
+
+.bottom_carousel_viewport{
+    overflow: hidden;
+    z-index: 50;
+
+    input {
+        color: white;
+        font-size: 20px;
+        width: 3rem;
+        height: 3rem;
+        border: 0;
+        background-color: rgba(0, 0, 0, 0.5); 
+        position: relative;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 0;
+        outline: 0;
+    }
+
+    .left{
+        top: 16.5rem;
+        left: 15%;
+        z-index: 1;
+    }
+
+    .right{
+        bottom: 16.5rem;
+        left: 80%;
+    }
+}
+
+$bottomCarouselNum : 4;
+.all_bottom_carousel{
+    display: flex;
+    width: 100*$bottomCarouselNum;
+    transition: all 0.5s;
+    transform: translate(-100%);
+}
+
+.bottom_carousel_component{
+    flex-shrink: 0;
+    width: 100%;
+    height:30rem;
+    background-size: 70rem 20rem;
+    background-repeat: no-repeat;
+    background-position: center left;
+
+    .ship, .stream, .shop, .read, .more{
+        margin-left: 35rem;
+        margin-top: 6rem;
+        padding : 0.3rem;
+        display:inline-block;
+        color: white;
+        font-weight: 600;
+    }
+
+    .ship{
+        background-color: $ship-color
+    }
+    .stream{
+        background-color: $stream-color
+    }
+    .shop{
+        background-color: $shop-color
+    }
+    .read{
+        background-color: $read-color
+    }
+    .more{
+        background-color: $more-color  
+    }
+
+    h1 {
+        width: 32rem;
+        margin-left: 35rem;
+        margin-top: 1rem;
+        font-size: 30px;
+        font-weight: 300;
+    }
+
+    h3, a {
+        width: 32rem;
+        margin-left: 35rem;
+        margin-top: 1rem;
+        font-size: 17px;
+        font-weight: 300;
+        text-decoration: none;
+        color: black;
+    }
+
+    a{
+        font-weight: bold;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.mini_carousel_section{
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+}
+
+.mini_carousel_viewport {
+    margin-top: 1.5rem;
+    height: 13rem;
+    width: 17rem;
+    overflow: hidden;
+}
+
+$slider_quantity : 4;
+.all_mini_carousel {
+    display: flex;
+    height: 100%;
+    width: $slider_quantity * 100%;
+    transform: translate(-17rem);
+}
+
+.slider_component {
+    height: 100%;
+    width: 17rem;
+    background-size: 17rem 13rem;
+    flex-shrink: 0;
+}
+
+@each $slide_btn in next_btn, prev_btn {
+    .#{$slide_btn} {
+        background: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        color: navy;
+        font-size: 20px;
+    }
+}
+
+.next_btn{
+    margin-left: 1rem;
+    margin-right: 3rem;
+}
+
+.prev_btn{
+    margin-right: 1rem;
+}
+
+.mini_article_section{
+    width: 35rem;
+}
+
+.mini_article_section h1 {
+    font-size: 48px;
+    font-weight: 300;
+    color: #002F36;
+    margin: 0;
+}
+
+.mini_article_section article, .mini_article_link {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+}
+
+
+.mini_article_link {
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}

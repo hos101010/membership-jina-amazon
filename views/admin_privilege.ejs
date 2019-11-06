@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" lang="ko">
+    <link rel="stylesheet" href="/stylesheets/css/carousel.css">
+    <title>Amazon.com: Amazon Prime</title>
+</head>
+
+<body>
+    <header>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="">Amazon</a></li>
+            <input type="button" class="home" value="메인페이지"/>
+            <input type="button" class="item" value="아이템관리"/>
+        </ul>
+    </nav>
+    <section class="main">
+            <% for(let i = 0; i<users.length; i++){%>
+                <section class="row">
+                <div><%=users[i].id%></div>
+                <div><%=users[i].privilege%></div>
+                <div><input type="checkbox" name='<%=users[i].id%>'/></div>
+                </section>
+            <%}%>
+            <input type="button" class="update_privilege" value="권한 부여"/>
+            <input type="button" class="delete_privilege"value="권한 취소"/>
+    </section>
+    <script src="/javascripts/admin/admin.js"></script>
+</body>
+
+</html>
